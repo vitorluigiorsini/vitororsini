@@ -14,7 +14,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">Vitor</span>
+            Hi, I'm <span className="text-[#915eff] animate-pulse">Vitor</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm a Full Stack <br className="sm:block hidden" />
@@ -26,9 +26,7 @@ const Hero = () => {
       <CTA />
 
       <div className="w-full">
-        <div className="shadow-card shadow-purple-500 absolute xs:h-80 xs:w-80 h-56 w-56 top-[45%] left-1/2 -translate-x-1/2 flex justify-center items-center rounded-full overflow-hidden animate-pulse">
-          <img src="profile.jpg" />
-        </div>
+        <div className="bg-profile bg-cover shadow-viole bg-no-repeat bg-center shadow-profile absolute xs:h-80 xs:w-80 h-56 w-56 top-[45%] left-1/2 -translate-x-1/2 flex justify-center items-center rounded-full overflow-hidden"></div>
       </div>
     </section>
   )
