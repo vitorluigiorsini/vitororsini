@@ -8,7 +8,6 @@ import {
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   mongodb,
@@ -17,107 +16,117 @@ import {
   docker,
   ctrls,
   vitororsini,
-  carrent,
-  jobit,
-  tripguide,
   onebitsports,
   doctorcare,
-  threejs,
-} from '../assets';
+  aws
+} from '../assets'
 
 export const navLinks = [
   {
     id: 'about',
-    title: 'About',
+    title: 'About'
   },
   {
-    id: 'work',
-    title: 'Work',
+    id: 'experience',
+    title: 'Experience'
+  },
+  {
+    id: 'projects',
+    title: 'Projects'
   },
   {
     id: 'contact',
-    title: 'Contact',
-  },
-];
+    title: 'Contact'
+  }
+]
 
 const services = [
   {
-    title: 'Web',
-    icon: web,
+    title: 'Web Development',
+    icon: web
   },
   {
-    title: 'Mobile',
-    icon: mobile,
+    title: 'Mobile Apps',
+    icon: mobile
   },
   {
     title: 'Backend',
-    icon: backend,
+    icon: backend
   },
   {
     title: 'Frontend',
-    icon: creator,
-  },
-];
+    icon: creator
+  }
+]
 
 const technologies = [
   {
     name: 'HTML 5',
-    icon: html,
+    icon: html
   },
   {
     name: 'CSS 3',
-    icon: css,
+    icon: css
   },
   {
     name: 'JavaScript',
-    icon: javascript,
+    icon: javascript
   },
   {
     name: 'TypeScript',
-    icon: typescript,
+    icon: typescript
   },
   {
     name: 'React JS',
-    icon: reactjs,
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: redux,
+    icon: reactjs
   },
   {
     name: 'Tailwind CSS',
-    icon: tailwind,
+    icon: tailwind
   },
   {
     name: 'Node JS',
-    icon: nodejs,
+    icon: nodejs
   },
   {
     name: 'MongoDB',
-    icon: mongodb,
+    icon: mongodb
   },
   {
-    name: 'Three JS',
-    icon: threejs,
+    name: 'AWS',
+    icon: aws
   },
   {
     name: 'git',
-    icon: git,
+    icon: git
   },
   {
     name: 'figma',
-    icon: figma,
+    icon: figma
   },
   {
     name: 'docker',
-    icon: docker,
-  },
-];
+    icon: docker
+  }
+]
 
 const experiences = [
   {
-    title: 'Frontend Developer',
-    company_name: 'Freelance',
+    title: 'Full Stack Developer',
+    company_name: 'Ctrl Saúde',
+    icon: ctrls,
+    iconBg: '#E6DEDD',
+    date: 'September 2022 - Current',
+    points: [
+      'Project management with agile methodology (Kanban)',
+      'Implementation of sales system using AWS serverless and TypeScript',
+      'Backend: development of API Rest and third-party APIs integration',
+      "Frontend: development of user's interfaces and APIs integration"
+    ]
+  },
+  {
+    title: 'Full Stack Developer',
+    company_name: 'Freelancer',
     icon: vitororsini,
     iconBg: '#383E56',
     date: 'March 2021 - September 2022',
@@ -125,23 +134,10 @@ const experiences = [
       'Developing and maintaining web applications using React.js, Node.js and other related technologies.',
       "Implementing REST API's using the best practices and clean code.",
       'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in bootcamps and continually learning new skills.',
-    ],
-  },
-  {
-    title: 'Full Stack Developer',
-    company_name: 'Ctrl Saúde',
-    icon: ctrls,
-    iconBg: '#E6DEDD',
-    date: 'September 2022 - Present',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-];
+      'Participating in bootcamps and continually learning new skills.'
+    ]
+  }
+]
 
 const testimonials = [
   {
@@ -150,7 +146,7 @@ const testimonials = [
     name: 'Sara Lee',
     designation: 'CFO',
     company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
+    image: 'https://randomuser.me/api/portraits/women/4.jpg'
   },
   {
     testimonial:
@@ -158,7 +154,7 @@ const testimonials = [
     name: 'Chris Brown',
     designation: 'COO',
     company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
+    image: 'https://randomuser.me/api/portraits/men/5.jpg'
   },
   {
     testimonial:
@@ -166,9 +162,9 @@ const testimonials = [
     name: 'Lisa Wang',
     designation: 'CTO',
     company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
-  },
-];
+    image: 'https://randomuser.me/api/portraits/women/6.jpg'
+  }
+]
 
 const projects = [
   {
@@ -178,15 +174,15 @@ const projects = [
     tags: [
       {
         name: 'HTML',
-        color: 'blue-text-gradient',
+        color: 'blue-text-gradient'
       },
       {
         name: 'CSS',
-        color: 'green-text-gradient',
-      },
+        color: 'green-text-gradient'
+      }
     ],
     image: onebitsports,
-    source_code_link: 'https://github.com/vitorluigiorsini/onebitsports',
+    source_code_link: 'https://github.com/vitorluigiorsini/onebitsports'
   },
   {
     name: 'Doctorcare',
@@ -195,20 +191,20 @@ const projects = [
     tags: [
       {
         name: 'HTML',
-        color: 'blue-text-gradient',
+        color: 'blue-text-gradient'
       },
       {
         name: 'CSS',
-        color: 'green-text-gradient',
+        color: 'green-text-gradient'
       },
       {
         name: 'JavaScript',
-        color: 'pink-text-gradient',
-      },
+        color: 'pink-text-gradient'
+      }
     ],
     image: doctorcare,
-    source_code_link: 'https://vitorluigiorsini.github.io/nlw-return/',
-  },
-];
+    source_code_link: 'https://vitorluigiorsini.github.io/nlw-return/'
+  }
+]
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects }

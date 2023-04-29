@@ -1,30 +1,30 @@
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
+import { useState, useRef } from 'react'
+import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
-import { styles } from '../styles';
-import { EarthCanvas } from './canvas';
-import { SectionWrapper } from '../hoc';
-import { slideIn } from '../utils/motion';
+import { styles } from '../styles'
+import { EarthCanvas } from './canvas'
+import { SectionWrapper } from '../hoc'
+import { slideIn } from '../utils/motion'
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef()
   const [form, setForm] = useState({
     name: '',
     email: '',
-    message: '',
-  });
-  const [loading, setLoading] = useState(false);
+    message: ''
+  })
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
 
-    setForm({ ...form, [name]: value });
-  };
+    setForm({ ...form, [name]: value })
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
+    e.preventDefault()
+    setLoading(true)
 
     emailjs
       .send(
@@ -36,33 +36,33 @@ const Contact = () => {
           to_name: 'Vitor Orsini',
           to_email: 'vitorluigiorsini@gmail.com',
           message: form.message,
-          reply_to: form.email,
+          reply_to: form.email
         },
         import.meta.env.VITE_EMAILJS_API
       )
       .then(
         () => {
-          setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
+          setLoading(false)
+          alert('Thank you. I will get back to you as soon as possible.')
 
           setForm({
             name: '',
             email: '',
-            message: '',
-          });
+            message: ''
+          })
         },
         (error) => {
-          setLoading(false);
+          setLoading(false)
 
-          console.log(error);
+          console.log(error)
 
-          alert('Something went wrong.');
+          alert('Something went wrong.')
         }
-      );
-  };
+      )
+  }
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+    <div className="xl:mt-12 xl:flex-row mb-20 flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
@@ -73,10 +73,10 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className="mt-12 flex flex-col gap-4"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+            <span className="text-white font-medium mb-2">Your Name</span>
             <input
               type="text"
               name="name"
@@ -87,7 +87,7 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Email</span>
+            <span className="text-white font-medium mb-2">Your Email</span>
             <input
               type="email"
               name="email"
@@ -98,7 +98,7 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
+            <span className="text-white font-medium mb-2">Your Message</span>
             <textarea
               rows="7"
               name="message"
@@ -125,7 +125,7 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionWrapper(Contact, 'contact');
+export default SectionWrapper(Contact, 'contact')
