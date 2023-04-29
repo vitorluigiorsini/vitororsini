@@ -28,6 +28,7 @@ import jobit from './jobit.png'
 import tripguide from './tripguide.png'
 import onebitsports from './onebitsports.png'
 import doctorcare from './doctorcare.png'
+import findDuo from './findDuo.jpeg'
 
 export {
   logo,
@@ -56,5 +57,6 @@ export {
   jobit,
   tripguide,
   onebitsports,
-  doctorcare
+  doctorcare,
+  findDuo
 }

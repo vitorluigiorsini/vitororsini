@@ -18,7 +18,8 @@ import {
   vitororsini,
   onebitsports,
   doctorcare,
-  aws
+  aws,
+  findDuo
 } from '../assets'
 
 export const navLinks = [
@@ -204,6 +205,31 @@ const projects = [
     ],
     image: doctorcare,
     source_code_link: 'https://vitorluigiorsini.github.io/nlw-return/'
+  },
+  {
+    name: 'Find Your Duo',
+    description:
+      'API, Web, and Mobile application to find peers and schedule matches.',
+    tags: [
+      {
+        name: 'React',
+        color: 'blue-text-gradient'
+      },
+      {
+        name: 'NodeJs',
+        color: 'green-text-gradient'
+      },
+      {
+        name: 'TypeScript',
+        color: 'pink-text-gradient'
+      },
+      {
+        name: 'React Native',
+        color: 'orange-text-gradient'
+      }
+    ],
+    image: findDuo,
+    source_code_link: 'https://vitorluigiorsini.github.io/nlw-eSports/'
   }
 ]
 
