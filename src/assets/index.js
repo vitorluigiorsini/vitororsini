@@ -4,6 +4,9 @@ import creator from './creator.png'
 import mobile from './mobile.png'
 import web from './web.png'
 import github from './github.png'
+import iconGithub from './icon-github.png'
+import iconLinkedin from './icon-linkedin.png'
+import iconWhatsapp from './icon-whatsapp.png'
 import menu from './menu.svg'
 import close from './close.svg'
 
@@ -28,7 +31,9 @@ import jobit from './jobit.png'
 import tripguide from './tripguide.png'
 import onebitsports from './onebitsports.png'
 import doctorcare from './doctorcare.png'
-import findDuo from './findDuo.jpeg'
+import findDuo from './findDuo.png'
+import portfolio from './portfolio.png'
+import ecommerce from './ecommerce.png'
 
 export {
   logo,
@@ -58,5 +63,10 @@ export {
   tripguide,
   onebitsports,
   doctorcare,
-  findDuo
+  findDuo,
+  portfolio,
+  ecommerce,
+  iconGithub,
+  iconLinkedin,
+  iconWhatsapp
 }

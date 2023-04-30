@@ -8,7 +8,7 @@ const CTA = () => {
         href={CV}
         rel="noopener noreferrer"
         target="_blank"
-        className="bg-tertiary hover:bg-opacity-60 py-3 px-3 xs:px-8 outline-none w-fit text-white font-bold xs:text-base text-xs shadow-md shadow-primary rounded-xl"
+        className="bg-tertiary animate-pulse hover:bg-opacity-60 py-3 px-3 xs:px-8 outline-none w-fit text-white font-bold xs:text-base text-xs shadow-md shadow-primary rounded-xl"
       >
         Download CV
       </a>

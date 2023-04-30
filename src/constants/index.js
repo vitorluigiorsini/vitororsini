@@ -19,7 +19,9 @@ import {
   onebitsports,
   doctorcare,
   aws,
-  findDuo
+  findDuo,
+  portfolio,
+  ecommerce
 } from '../assets'
 
 export const navLinks = [
@@ -204,7 +206,8 @@ const projects = [
       }
     ],
     image: doctorcare,
-    source_code_link: 'https://vitorluigiorsini.github.io/nlw-return/'
+    source_code_link: 'https://github.com/vitorluigiorsini/nlw-return/'
+    // source_code_link: 'https://vitorluigiorsini.github.io/nlw-return/'
   },
   {
     name: 'Find Your Duo',
@@ -229,7 +232,48 @@ const projects = [
       }
     ],
     image: findDuo,
-    source_code_link: 'https://vitorluigiorsini.github.io/nlw-eSports/'
+    source_code_link: 'https://github.com/vitorluigiorsini/nlw-eSports/'
+    // source_code_link: 'https://vitorluigiorsini.github.io/nlw-eSports/'
+  },
+  {
+    name: 'Portfolio',
+    description: 'A modern portfolio website created with React and ThreeJs.',
+    tags: [
+      {
+        name: 'React',
+        color: 'blue-text-gradient'
+      },
+      {
+        name: 'Javascript',
+        color: 'green-text-gradient'
+      },
+      {
+        name: 'ThreeJs',
+        color: 'orange-text-gradient'
+      }
+    ],
+    image: portfolio,
+    source_code_link: 'https://github.com/vitorluigiorsini/vitororsini/'
+  },
+  {
+    name: 'ECommerce API',
+    description: 'E-Commerce serverless API with AWS-CDK + TypeScript.',
+    tags: [
+      {
+        name: 'NodeJS',
+        color: 'blue-text-gradient'
+      },
+      {
+        name: 'TypeScript',
+        color: 'green-text-gradient'
+      },
+      {
+        name: 'AWS-CDK',
+        color: 'orange-text-gradient'
+      }
+    ],
+    image: ecommerce,
+    source_code_link: 'https://github.com/vitorluigiorsini/ecommerce-aws-api/'
   }
 ]
 
