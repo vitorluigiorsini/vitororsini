@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
-import './nav.css'
 import { AiOutlineHome } from 'react-icons/ai'
 import { AiOutlineUser } from 'react-icons/ai'
 import { SiKnowledgebase, SiLitiengine } from 'react-icons/si'
 import { BiMessageSquareDetail } from 'react-icons/bi'
 
-const Nav = () => {
+const MobileNavbar = () => {
   const [activeNav, setActiveNav] = useState('')
 
   return (
-    <nav>
+    <nav id="mobileNav">
       <a
         href="#"
         onClick={() => setActiveNav('')}
@@ -54,4 +53,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default MobileNavbar

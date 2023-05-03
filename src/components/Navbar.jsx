@@ -37,7 +37,7 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex h-20 items-center py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex sm:justify-between justify-center items-center max-w-7xl mx-auto">
-        <div className="xs:w-auto w-full flex justify-between xs:justify-start items-center">
+        <div className="xs:w-auto w-full flex justify-between xs:justify-start items-center gap-8">
           <Link
             to="/"
             className="flex items-center gap-2"
@@ -51,7 +51,7 @@ const Navbar = () => {
               Vitor Orsini
             </p>
           </Link>
-          <div className="flex items-center xs:gap-3 gap-2 p-4">
+          <div className="flex items-center xs:gap-3 gap-2">
             <div
               onClick={() =>
                 window.open('https://github.com/vitorluigiorsini/', '_blank')
