@@ -39,7 +39,7 @@
 }
 
 #mobileNav a:hover {
-  background: rgba(128, 77, 238, 0.2);
+  color: rgb(131, 131, 131)
 }
 
 /* #mobileNav a[title]:hover::after {
@@ -52,10 +52,8 @@
 
 #mobileNav a.active {
   background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(-90deg,
-      #804dee 0%,
-      rgba(60, 51, 80, 0) 100%);
+  background: radial-gradient(rgba(60, 51, 80, 0) 10%, rgb(128, 77, 238, 0.8) 100%);
+  background: -webkit-radial-gradient(rgba(60, 51, 80, 0) 10%, rgb(128, 77, 238, 0.8) 100%);
   color: #fff
 }
 
