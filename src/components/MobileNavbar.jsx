@@ -3,20 +3,23 @@ import { AiOutlineHome } from 'react-icons/ai'
 import { AiOutlineUser } from 'react-icons/ai'
 import { SiKnowledgebase, SiLitiengine } from 'react-icons/si'
 import { BiMessageSquareDetail } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 
 const MobileNavbar = () => {
   const [activeNav, setActiveNav] = useState('')
 
   return (
     <nav id="mobileNav">
-      <a
-        href="#"
-        onClick={() => setActiveNav('')}
+      <Link
+        to="/"
         className={activeNav === '' ? 'active' : ''}
-        // title="Home"
+        onClick={() => {
+          setActiveNav('')
+          window.scrollTo(0, 0)
+        }}
       >
         <AiOutlineHome />
-      </a>
+      </Link>
       <a
         href="#about"
         onClick={() => setActiveNav('about')}
