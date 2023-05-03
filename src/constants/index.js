@@ -49,7 +49,7 @@ const services = [
     icon: web
   },
   {
-    title: 'Mobile Apps',
+    title: 'Mobile Development',
     icon: mobile
   },
   {

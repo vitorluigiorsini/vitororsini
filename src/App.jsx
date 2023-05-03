@@ -16,29 +16,11 @@ import { useEffect, useState } from 'react'
 import { logo } from './assets'
 
 const App = () => {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 640px)')
-
-    setIsMobile(mediaQuery.matches)
-
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches)
-    }
-
-    mediaQuery.addEventListener('change', handleMediaQueryChange)
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange)
-    }
-  }, [])
-
   return (
     <BrowserRouter>
       <div className="relative bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          {isMobile ? (
+          {/* {isMobile ? (
             <>
               <div className="flex justify-center items-center absolute top-10 w-full gap-2">
                 <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
@@ -51,7 +33,9 @@ const App = () => {
             </>
           ) : (
             <Navbar />
-          )}
+          )} */}
+          <Nav />
+          <Navbar />
           <Hero />
         </div>
         <About />
