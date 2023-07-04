@@ -1,11 +1,11 @@
-import React from 'react'
-import Tilt from 'react-tilt'
-import { motion } from 'framer-motion'
+import React from 'react';
+import Tilt from 'react-tilt';
+import { motion } from 'framer-motion';
 
-import { styles } from '../styles'
-import { services } from '../constants'
-import { fadeIn, textVariant } from '../utils/motion'
-import { SectionWrapper } from '../hoc'
+import { styles } from '../styles';
+import { services } from '../constants';
+import { fadeIn, textVariant } from '../utils/motion';
+import { SectionWrapper } from '../hoc';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -25,8 +25,8 @@ const ServiceCard = ({ index, title, icon }) => {
         </div>
       </motion.div>
     </Tilt>
-  )
-}
+  );
+};
 
 const About = () => {
   return (
@@ -44,7 +44,7 @@ const About = () => {
         and software, computer maintenance manager and IT technical assistant.
         Lived in the United States for 18 months. Have advanced fluency in
         English. Acting since September 2021 in the technology area. Currently
-        working as a Full Stack Developer in a startup.
+        working as a Software Engineer in a startup.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
@@ -53,7 +53,7 @@ const About = () => {
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SectionWrapper(About, 'about')
+export default SectionWrapper(About, 'about');

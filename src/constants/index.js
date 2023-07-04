@@ -19,10 +19,11 @@ import {
   onebitsports,
   doctorcare,
   aws,
+  postgresql,
   findDuo,
   portfolio,
   ecommerce
-} from '../assets'
+} from '../assets';
 
 export const navLinks = [
   {
@@ -41,7 +42,7 @@ export const navLinks = [
     id: 'contact',
     title: 'Contact'
   }
-]
+];
 
 const services = [
   {
@@ -49,7 +50,7 @@ const services = [
     icon: web
   },
   {
-    title: 'Mobile Development',
+    title: 'Cloud Computing',
     icon: mobile
   },
   {
@@ -60,7 +61,7 @@ const services = [
     title: 'Frontend',
     icon: creator
   }
-]
+];
 
 const technologies = [
   {
@@ -96,6 +97,10 @@ const technologies = [
     icon: mongodb
   },
   {
+    name: 'PostgreSQL',
+    icon: postgresql
+  },
+  {
     name: 'AWS',
     icon: aws
   },
@@ -111,7 +116,7 @@ const technologies = [
     name: 'docker',
     icon: docker
   }
-]
+];
 
 const experiences = [
   {
@@ -121,10 +126,10 @@ const experiences = [
     iconBg: '#E6DEDD',
     date: 'September 2022 - Current',
     points: [
-      'Project management with agile methodology (Kanban)',
-      'Implementation of sales system using AWS serverless and TypeScript',
-      'Backend: development of API Rest and third-party APIs integration',
-      "Frontend: development of user's interfaces and APIs integration"
+      'Project management with agile methodology (Kanban).',
+      'Implementation of systems with the main technologies: AWS, NodeJs, TypeScript and React.',
+      'Backend: implementation of Rest API, integration with external APIs, serverless framework.',
+      'Frontend: implementation of user interfaces with React and Material UI.'
     ]
   },
   {
@@ -140,7 +145,7 @@ const experiences = [
       'Participating in bootcamps and continually learning new skills.'
     ]
   }
-]
+];
 
 const testimonials = [
   {
@@ -167,7 +172,7 @@ const testimonials = [
     company: '456 Enterprises',
     image: 'https://randomuser.me/api/portraits/women/6.jpg'
   }
-]
+];
 
 const projects = [
   {
@@ -275,6 +280,6 @@ const projects = [
     image: ecommerce,
     source_code_link: 'https://github.com/vitorluigiorsini/ecommerce-aws-api/'
   }
-]
+];
 
-export { services, technologies, experiences, testimonials, projects }
+export { services, technologies, experiences, testimonials, projects };

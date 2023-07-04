@@ -1,6 +1,6 @@
-import { styles } from '../styles'
+import { styles } from '../styles';
 
-import CTA from './CTA'
+import CTA from './CTA';
 
 const Hero = () => {
   return (
@@ -18,8 +18,8 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915eff]">Vitor</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a Full Stack <br className="sm:block hidden" />
-            Developer
+            I'm a Software <br className="sm:block hidden" />
+            Engineer
           </p>
         </div>
       </div>
@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="bg-profile bg-cover bg-no-repeat bg-center ring-2 ring-white-100 absolute xs:h-80 xs:w-80 h-44 w-44 top-[45%] left-1/2 -translate-x-1/2 flex justify-center items-center rounded-full overflow-hidden"></div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
