@@ -1,30 +1,36 @@
-import { useState, useRef } from 'react'
-import { motion } from 'framer-motion'
-import emailjs from '@emailjs/browser'
+import { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
-import { styles } from '../styles'
-import { EarthCanvas } from './canvas'
-import { SectionWrapper } from '../hoc'
-import { slideIn } from '../utils/motion'
+import { styles } from '../styles';
+import { EarthCanvas } from './canvas';
+import { SectionWrapper } from '../hoc';
+import { slideIn } from '../utils/motion';
+import { languages } from '../constants/languages';
+import { useAppLanguageContext } from '../contexts';
 
 const Contact = () => {
-  const formRef = useRef()
+  const { languageOption } = useAppLanguageContext();
+  const language = languages[languageOption];
+
+  const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
     email: '',
     message: ''
-  })
-  const [loading, setLoading] = useState(false)
+  });
+  const [loading, setLoading] = useState(false);
+  const [sentMessage, setSentMessage] = useState('');
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
 
-    setForm({ ...form, [name]: value })
-  }
+    setForm({ ...form, [name]: value });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setLoading(true)
+    e.preventDefault();
+    setLoading(true);
 
     emailjs
       .send(
@@ -42,33 +48,35 @@ const Contact = () => {
       )
       .then(
         () => {
-          setLoading(false)
-          alert('Thank you. I will get back to you as soon as possible.')
+          setLoading(false);
+          setSentMessage(language.contactText.sentOk);
 
           setForm({
             name: '',
             email: '',
             message: ''
-          })
+          });
         },
         (error) => {
-          setLoading(false)
+          setLoading(false);
 
-          console.log(error)
+          console.log(error);
 
-          alert('Something went wrong.')
+          setSentMessage(language.contactText.sentError);
         }
-      )
-  }
+      );
+  };
 
   return (
-    <div className="xl:mt-12 xl:flex-row mb-20 flex-col-reverse flex gap-10 overflow-hidden">
+    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact</h3>
+        <p className={styles.sectionSubText}>{language.contactText.title}</p>
+        <h3 className={styles.sectionHeadText}>
+          {language.contactText.subtitle}
+        </h3>
 
         <form
           ref={formRef}
@@ -76,44 +84,51 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-4"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-2">Your Name</span>
+            <span className="text-white font-medium mb-2">
+              {language.contactText.name}
+            </span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder={language.contactText.namePlaceholder}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-2">Your Email</span>
+            <span className="text-white font-medium mb-2">
+              {language.contactText.email}
+            </span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your email?"
+              placeholder={language.contactText.emailPlaceholder}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-2">Your Message</span>
+            <span className="text-white font-medium mb-2">
+              {language.contactText.message}
+            </span>
             <textarea
-              rows="7"
+              rows="5"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What do you want to say?"
+              placeholder={language.contactText.messagePlaceholder}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
+          <label className="flex justify-center text-sm">{sentMessage}</label>
 
           <button
             type="submit"
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
-            {loading ? 'Sending...' : 'Send'}
+            {loading ? language.contactText.sending : language.contactText.send}
           </button>
         </form>
       </motion.div>
@@ -125,7 +140,7 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default SectionWrapper(Contact, 'contact')
+export default SectionWrapper(Contact, 'contact');

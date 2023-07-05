@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
 
 import {
   About,
@@ -10,30 +10,35 @@ import {
   MobileNavbar,
   Tech,
   Projects,
-  StarsCanvas
-} from './components'
+  StarsCanvas,
+  Footer
+} from './components';
+import { AppLanguageProvider } from './contexts/LanguageContext';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="relative bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <MobileNavbar />
-          <Navbar />
-          <Hero />
+    <AppLanguageProvider>
+      <BrowserRouter>
+        <div className="relative bg-primary">
+          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+            <MobileNavbar />
+            <Navbar />
+            <Hero />
+          </div>
+          <About />
+          <Experience />
+          <Tech />
+          <Projects />
+          {/* <Feedbacks /> */}
+          <div className="relative z-0">
+            <Contact />
+            <StarsCanvas />
+            <Footer />
+          </div>
         </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Projects />
-        {/* <Feedbacks /> */}
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
-    </BrowserRouter>
-  )
-}
+      </BrowserRouter>
+    </AppLanguageProvider>
+  );
+};
 
-export default App
+export default App;

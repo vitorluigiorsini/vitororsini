@@ -1,8 +1,13 @@
+import CTA from './CTA';
 import { styles } from '../styles';
 
-import CTA from './CTA';
+import { languages } from '../constants/languages';
+import { useAppLanguageContext } from '../contexts';
 
 const Hero = () => {
+  const { languageOption } = useAppLanguageContext();
+  const language = languages[languageOption];
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -15,11 +20,11 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915eff]">Vitor</span>
+            {language.heroText.greeting}{' '}
+            <span className="text-[#915eff]">Vitor</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a Software <br className="sm:block hidden" />
-            Engineer
+            {language.heroText.role}
           </p>
         </div>
       </div>
@@ -27,7 +32,7 @@ const Hero = () => {
       <CTA />
 
       <div className="w-full">
-        <div className="bg-profile bg-cover bg-no-repeat bg-center ring-2 ring-white-100 absolute xs:h-80 xs:w-80 h-44 w-44 top-[45%] left-1/2 -translate-x-1/2 flex justify-center items-center rounded-full overflow-hidden"></div>
+        <div className="bg-profile bg-cover bg-no-repeat bg-center ring-2 ring-white-100 absolute xs:h-80 xs:w-80 h-44 w-44 top-[48%] left-1/2 -translate-x-1/2 flex justify-center items-center rounded-full overflow-hidden"></div>
       </div>
     </section>
   );
