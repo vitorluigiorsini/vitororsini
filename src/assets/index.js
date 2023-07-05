@@ -36,8 +36,6 @@ import findDuo from './findDuo.png';
 import portfolio from './portfolio.png';
 import ecommerce from './ecommerce.png';
 
-import CV from './VitorOrsiniDev-CV-Dark-En.pdf';
-
 export {
   logo,
   backend,
@@ -73,5 +71,4 @@ export {
   iconGithub,
   iconLinkedin,
   iconWhatsapp,
-  CV
 };

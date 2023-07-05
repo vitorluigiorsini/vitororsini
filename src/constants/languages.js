@@ -53,7 +53,9 @@ export const languages = {
 
     CTAText: {
       download: 'Download CV',
-      contact: 'Vamos conversar'
+      contact: 'Vamos conversar',
+      cvURL:
+        'https://drive.google.com/file/d/10lL3f68RNuKoNazB1PEgD-K_rHrSnfM7/view?usp=drive_link'
     },
 
     aboutText: {
@@ -367,7 +369,9 @@ export const languages = {
 
     CTAText: {
       download: 'Download CV',
-      contact: "Let's talk"
+      contact: "Let's talk",
+      cvURL:
+        'https://drive.google.com/file/d/1jbx5t8MR0z3R4a00NkltDaazkXINgJ7w/view?usp=drive_link'
     },
 
     aboutText: {
