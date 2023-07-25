@@ -55,7 +55,7 @@ export const languages = {
       download: 'Download CV',
       contact: 'Vamos conversar',
       cvURL:
-        'https://drive.google.com/file/d/10lL3f68RNuKoNazB1PEgD-K_rHrSnfM7/view?usp=drive_link'
+        'https://drive.google.com/file/d/1O9L4upOMLzdAm3qEHuFTYRNCSBEOg8_1/view?usp=drive_link'
     },
 
     aboutText: {
@@ -371,7 +371,7 @@ export const languages = {
       download: 'Download CV',
       contact: "Let's talk",
       cvURL:
-        'https://drive.google.com/file/d/1jbx5t8MR0z3R4a00NkltDaazkXINgJ7w/view?usp=drive_link'
+        'https://drive.google.com/file/d/1fFUQ6YtMqE0ZLKJXffJK4cCnVrUresAO/view?usp=drive_link'
     },
 
     aboutText: {
