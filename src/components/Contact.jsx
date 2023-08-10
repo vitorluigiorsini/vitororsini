@@ -20,6 +20,7 @@ const Contact = () => {
     message: ''
   });
   const [loading, setLoading] = useState(false);
+  const [copiedToClipboard, setCopiedToClipboard] = useState(false);
   const [sentMessage, setSentMessage] = useState('');
 
   const handleChange = (e) => {
@@ -67,6 +68,13 @@ const Contact = () => {
       );
   };
 
+  function handleCopiedToClipboard() {
+    setCopiedToClipboard(true);
+    setTimeout(() => {
+      setCopiedToClipboard(false);
+    }, 5000);
+  }
+
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
@@ -77,7 +85,28 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>
           {language.contactText.subtitle}
         </h3>
-
+        {!copiedToClipboard ? (
+          <>
+            <p className="text-white font-medium mt-4 text-center">
+              {language.contactText.copyToClipboardText}
+            </p>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  language.contactText.clipboardEmail
+                );
+                handleCopiedToClipboard();
+              }}
+              className="flex mx-auto mt-4 bg-tertiary hover:bg-opacity-60 py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            >
+              ✉️
+            </button>
+          </>
+        ) : (
+          <p className="text-white font-medium mt-4 text-center">
+            {language.contactText.copiedToClipboardText}
+          </p>
+        )}
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -126,7 +155,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            className="bg-tertiary hover:bg-opacity-60 py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
             {loading ? language.contactText.sending : language.contactText.send}
           </button>

@@ -8,6 +8,7 @@ import {
   html,
   css,
   reactjs,
+  vuejs,
   tailwind,
   nodejs,
   mongodb,
@@ -62,7 +63,7 @@ export const languages = {
       title: 'Introdução',
       subtitle: 'Sobre',
       about:
-        'Superior em Engenharia Civil. Desenvolvedor e Técnico em Informática com mais de 5 anos de experiência em TI. Atuou como professor de hardware e software, gerente de manutenção de computadores e auxiliar técnico de TI. Morou 18 meses nos Estados Unidos, onde alcançou a fluência avançada em Inglês. Atuando desde setembro de 2021 na área da tecnologia. Atualmente trabalhando como Engenheiro de Software em uma startup.'
+        'Engenheiro de software com 3 anos de experiência, especializado em JavaScript (React, VueJS, NodeJS) e TypeScript. Comprometido com código limpo e princípios SOLID, projeto soluções eficientes abrangendo front-end e back-end. Proficiente em AWS, Docker, CI/CD e bancos de dados (PostgreSQL, MongoDB). Solucionador de problemas orientado para a colaboração, dedicado a fornecer integrações de alta qualidade.'
     },
 
     services: [
@@ -100,19 +101,20 @@ export const languages = {
           'Gerenciamento de projeto utilizando metodologia ágil (Kanban).',
           'Implementação de sistema com as principais tecnologias: AWS, NodeJs, TypeScript e React.',
           'Backend: implementação de Rest API, integrações com APIs externas, serverless framework.',
-          'Frontend: implementação de interfaces de usuário com React e Material UI.'
+          'Frontend: implementação de interfaces de usuário com React e Material UI.',
+          'Desenvolvimento de sistema de buscas com OpenSearch.'
         ]
       },
       {
-        title: 'Desenvolvedor Full Stack',
-        company_name: 'Freelancer',
+        title: 'Desenvolvedor Freelancer',
+        company_name: 'Autônomo',
         icon: vitororsini,
         iconBg: '#383E56',
-        date: 'Março 2021 - Setembro 2022',
+        date: 'Agosto 2020 - Setembro 2022',
         points: [
           'Desenvolvimento e manutenção de aplicações web usando React.js, Node.js e outras tecnologias relacionadas.',
           "Implementação de REST API's usando boas práticas e clean code.",
-          'Implementação de design resposivo e garantindo compatibilidade.',
+          'Implementação de design resposivo.',
           'Participação de bootcamps e aprendizado contínuo de novas tecnologias.'
         ]
       }
@@ -143,6 +145,10 @@ export const languages = {
       {
         name: 'React JS',
         icon: reactjs
+      },
+      {
+        name: 'Vue JS',
+        icon: vuejs
       },
       {
         name: 'Tailwind CSS',
@@ -329,6 +335,10 @@ export const languages = {
     contactText: {
       title: 'Entre em contato',
       subtitle: 'Contato',
+      copyToClipboardText:
+        'Clique para copiar meu email para sua área de transferência',
+      clipboardEmail: 'vitorluigiorsini@gmail.com',
+      copiedToClipboardText: '✔️ Copied!',
       name: 'Seu nome',
       namePlaceholder: 'Qual o seu nome?',
       email: 'Seu email',
@@ -337,7 +347,7 @@ export const languages = {
       messagePlaceholder: 'O que você gostaria de falar?',
       send: 'Enviar',
       sending: 'Enviando...',
-      sentOk: '✅ Obrigado. Entrarei em contato o mais breve possível.',
+      sentOk: '✔️ Obrigado. Entrarei em contato o mais breve possível.',
       sentError: '❌ Algo deu errado. Tente novamente mais tarde.'
     }
   },
@@ -378,7 +388,7 @@ export const languages = {
       title: 'Introduction',
       subtitle: 'Overview',
       about:
-        'Major in Civil Engineering. Developer and Computer Technician with more than 5 years of experience in IT. Experience as a professor of hardware  and software, computer maintenance manager and IT technical assistant. Lived in the United States for 18 months. Have advanced fluency in English. Acting since September 2021 in the technology area. Currently working as a Software Engineer in a startup.'
+        'Accomplished Brazilian software engineer with 3 years of experience specializing in JavaScript (React, VueJS, NodeJS) and TypeScript. Committed to clean code and SOLID principles, I architect efficient solutions spanning frontend and backend. Proficient in AWS, Docker, CI/CD, and databases (PostgreSQL, MongoDB). Collaboration-driven problem-solver, dedicated to delivering high-quality integrations.'
     },
 
     services: [
@@ -416,15 +426,16 @@ export const languages = {
           'Project management with agile methodology (Kanban).',
           'Implementation of systems with the main technologies: AWS, NodeJs, TypeScript and React.',
           'Backend: implementation of Rest API, integration with external APIs, serverless framework.',
-          'Frontend: implementation of user interfaces with React and Material UI.'
+          'Frontend: implementation of user interfaces with React and Material UI.',
+          'Development of search function with OpenSearch.'
         ]
       },
       {
-        title: 'Full Stack Developer',
-        company_name: 'Freelancer',
+        title: 'Freelancer Developer',
+        company_name: 'Autonomous',
         icon: vitororsini,
         iconBg: '#383E56',
-        date: 'March 2021 - September 2022',
+        date: 'August 2020 - September 2022',
         points: [
           'Developing and maintaining web applications using React.js, Node.js and other related technologies.',
           "Implementing REST API's using the best practices and clean code.",
@@ -459,6 +470,10 @@ export const languages = {
       {
         name: 'React JS',
         icon: reactjs
+      },
+      {
+        name: 'Vue JS',
+        icon: vuejs
       },
       {
         name: 'Tailwind CSS',
@@ -646,6 +661,9 @@ export const languages = {
     contactText: {
       title: 'Get in Touch',
       subtitle: 'Contact',
+      copyToClipboardText: 'Click to copy my email address to you clipboard',
+      clipboardEmail: 'vitorluigiorsini@gmail.com',
+      copiedToClipboardText: '✔️ Copied!',
       name: 'Your name',
       namePlaceholder: "What's your name name?",
       email: 'Your email',
@@ -654,7 +672,7 @@ export const languages = {
       messagePlaceholder: 'What do you want to say?',
       send: 'Send',
       sending: 'Sending...',
-      sentOk: '✅ Thank you. I will get back to you as soon as possible.',
+      sentOk: '✔️ Thank you. I will get back to you as soon as possible.',
       sentError: '❌ Something went wrong. Try again later.'
     }
   }
