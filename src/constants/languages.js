@@ -338,7 +338,7 @@ export const languages = {
       copyToClipboardText:
         'Clique para copiar meu email para sua área de transferência',
       clipboardEmail: 'vitorluigiorsini@gmail.com',
-      copiedToClipboardText: '✔️ Copied!',
+      copiedToClipboardText: '✔️ Copiado!',
       name: 'Seu nome',
       namePlaceholder: 'Qual o seu nome?',
       email: 'Seu email',
