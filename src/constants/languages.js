@@ -63,7 +63,7 @@ export const languages = {
       title: 'Introdução',
       subtitle: 'Sobre',
       about:
-        'Engenheiro de software com 3 anos de experiência, especializado em JavaScript (React, VueJS, NodeJS) e TypeScript. Comprometido com código limpo e princípios SOLID, projeto soluções eficientes abrangendo front-end e back-end. Proficiente em AWS, Docker, CI/CD e bancos de dados (PostgreSQL, MongoDB). Solucionador de problemas orientado para a colaboração, dedicado a fornecer integrações de alta qualidade.'
+        "Engenheiro de software com foco em JavaScript, React e Node.js. Desenvolvi diversos projetos pessoais abrangendo front-end e back-end, buscando sempre implementar um código limpo seguindo princípios SOLID. Durante a minha trajetória, tive a oportunidade de liderar o desenvolvimento de um MVP desde a sua fase inicial até a sua liberação. Aprofundei conhecimentos em TypeScript, bibliotecas e frameworks como Serverless, React, Node.js e Material UI, e ferramentas de nuvem da AWS. Implementei end-points, banco de dados NoSQL, integrações com API's externas e automatizei o deploy de sistemas end-to-end. Dentre as tecnologia que já tive contato estão o Next.js,Vue.js, Tailwind CSS, Styled Components, Nest.js e Docker. Estou sempre em busca de novos desafios e oportunidades para expandir ainda mais minha expertise no campo do desenvolvimento tecnológico."
     },
 
     services: [
@@ -388,7 +388,7 @@ export const languages = {
       title: 'Introduction',
       subtitle: 'Overview',
       about:
-        'Accomplished Brazilian software engineer with 3 years of experience specializing in JavaScript (React, VueJS, NodeJS) and TypeScript. Committed to clean code and SOLID principles, I architect efficient solutions spanning frontend and backend. Proficient in AWS, Docker, CI/CD, and databases (PostgreSQL, MongoDB). Collaboration-driven problem-solver, dedicated to delivering high-quality integrations.'
+        "Software engineer focused on JavaScript, React and Node.js. I developed several personal projects covering front-end and back-end, always trying to implement a clean code following SOLID principles. During my trajectory, I had the opportunity to lead the development of an MVP from its initial phase to its release. I deepened my knowledge in TypeScript, libraries and frameworks such as Serverless, React, Node.js and Material UI, and AWS cloud tools. Implemented end-points, NoSQL database, integrations with external API's and automated the deployment of end-to-end systems. Among the technologies I've had contact with are Next.js, Vue.js, Tailwind CSS, Styled Components, Nest.js and Docker. I am always looking for new challenges and opportunities to further expand my expertise in the field of technological development."
     },
 
     services: [
