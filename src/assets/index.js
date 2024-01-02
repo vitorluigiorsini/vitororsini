@@ -25,8 +25,8 @@ import typescript from './tech/typescript.png';
 import aws from './tech/aws.png';
 import postgresql from './tech/postgresql.png';
 
+import supra from './company/supra.png';
 import ctrls from './company/ctrls.png';
-import vitororsini from './company/vitororsini.png';
 
 import carrent from './carrent.png';
 import jobit from './jobit.png';
@@ -61,7 +61,7 @@ export {
   aws,
   postgresql,
   ctrls,
-  vitororsini,
+  supra,
   carrent,
   jobit,
   tripguide,

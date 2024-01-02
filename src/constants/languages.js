@@ -16,7 +16,7 @@ import {
   figma,
   docker,
   ctrls,
-  vitororsini,
+  supra,
   onebitsports,
   doctorcare,
   aws,
@@ -63,7 +63,7 @@ export const languages = {
       title: 'Introdução',
       subtitle: 'Sobre',
       about:
-        "Engenheiro de software com foco em JavaScript, React e Node.js. Desenvolvi diversos projetos pessoais abrangendo front-end e back-end, buscando sempre implementar um código limpo seguindo princípios SOLID. Durante a minha trajetória, tive a oportunidade de liderar o desenvolvimento de um MVP desde a sua fase inicial até a sua liberação. Aprofundei conhecimentos em TypeScript, bibliotecas e frameworks como Serverless, React, Node.js e Material UI, e ferramentas de nuvem da AWS. Implementei end-points, banco de dados NoSQL, integrações com API's externas e automatizei o deploy de sistemas end-to-end. Dentre as tecnologia que já tive contato estão o Next.js,Vue.js, Tailwind CSS, Styled Components, Nest.js e Docker. Estou sempre em busca de novos desafios e oportunidades para expandir ainda mais minha expertise no campo do desenvolvimento tecnológico."
+        'Engenheiro de software com foco em TypeScript, React e Node.js. Desenvolvi diversos projetos pessoais abrangendo Front-End, Back-End e integração entre sistemas, buscando sempre utilizar as boas práticas de desenvolvimento de software. Atuei em uma Startup onde liderei o desenvolvimento de um MVP desde a sua fase inicial até a sua liberação. Aprofundei conhecimentos em arquitetura serverless e ferramentas de nuvem da AWS, integrações com APIs externas e versionamento e automatização de deploy do sistema.Atualmente tenho estudo sobre diferentes tipos de arquitetura e patterns como DDD e Microsserviços, aplicação dos princípios do Clean Code, comunicação entre sistemas, modularização de sistemas monolíticos, containers, e ferramentas de cloud. Estou sempre em busca de novos desafios para expandir ainda mais minha expertise na área da tecnologia.'
     },
 
     services: [
@@ -93,29 +93,30 @@ export const languages = {
     experiences: [
       {
         title: 'Desenvolvedor Full Stack',
-        company_name: 'Ctrl Saúde',
-        icon: ctrls,
-        iconBg: '#E6DEDD',
-        date: 'Setembro 2022 - Atual',
+        company_name: 'Supra',
+        icon: supra,
+        iconBg: '#383E56',
+        date: 'Novembro 2023 - atual',
         points: [
-          'Gerenciamento de projeto utilizando metodologia ágil (Kanban).',
-          'Implementação de sistema com as principais tecnologias: AWS, NodeJs, TypeScript e React.',
-          'Backend: implementação de Rest API, integrações com APIs externas, serverless framework.',
-          'Frontend: implementação de interfaces de usuário com React e Material UI.',
-          'Desenvolvimento de sistema de buscas com OpenSearch.'
+          'Análise de requisitos',
+          'Design de arquitetura',
+          'Codificação',
+          'Testes e depuração',
+          'Manutenção do software',
+          'Colaboração em equipe',
+          'Documentação'
         ]
       },
       {
-        title: 'Desenvolvedor Freelancer',
-        company_name: 'Autônomo',
-        icon: vitororsini,
-        iconBg: '#383E56',
-        date: 'Agosto 2020 - Setembro 2022',
+        title: 'Desenvolvedor Full Stack',
+        company_name: 'Ctrl Saúde',
+        icon: ctrls,
+        iconBg: '#E6DEDD',
+        date: 'Setembro 2022 - Novembro 2023',
         points: [
-          'Desenvolvimento e manutenção de aplicações web usando React.js, Node.js e outras tecnologias relacionadas.',
-          "Implementação de REST API's usando boas práticas e clean code.",
-          'Implementação de design resposivo.',
-          'Participação de bootcamps e aprendizado contínuo de novas tecnologias.'
+          'Desenvolvimento de sistema MVP para vendas utilizando arquitetura serverless com implantação na nuvem da AWS.',
+          'Implementação de ChatBot com API oficial do WhatsApp Business, desenvolvimento do Back-End e Front-End, integração com APIs externas, versionamento do código, automatização do deploy, e documentação.',
+          'Techs: TypeScript, React, Material UI, Node.js, AWS (DynamoDB, S3, API Gateway, CloudFront, OpenSearch, CodeBuild, Amplify), Git, BitBucket, MessageBird, ShortCut, Postman.'
         ]
       }
     ],
@@ -388,7 +389,7 @@ export const languages = {
       title: 'Introduction',
       subtitle: 'Overview',
       about:
-        "Software engineer focused on JavaScript, React and Node.js. I developed several personal projects covering front-end and back-end, always trying to implement a clean code following SOLID principles. During my trajectory, I had the opportunity to lead the development of an MVP from its initial phase to its release. I deepened my knowledge in TypeScript, libraries and frameworks such as Serverless, React, Node.js and Material UI, and AWS cloud tools. Implemented end-points, NoSQL database, integrations with external API's and automated the deployment of end-to-end systems. Among the technologies I've had contact with are Next.js, Vue.js, Tailwind CSS, Styled Components, Nest.js and Docker. I am always looking for new challenges and opportunities to further expand my expertise in the field of technological development."
+        'Software engineer with a focus on TypeScript, React, and Node.js. I have developed several personal projects spanning Front-End, Back-End, and system integration, always striving to adhere to best software development practices. I worked at a startup where I led the development of an MVP from its initial phase to release. I deepened my knowledge in serverless architecture and AWS cloud tools, external API integrations, and system versioning and deployment automation. Currently, I am studying different architecture types and patterns such as DDD and Microservices, applying Clean Code principles, system communication, modularization of monolithic systems, containers, and cloud tools. I am always seeking new challenges to further expand my expertise in the technology field.'
     },
 
     services: [
@@ -418,29 +419,30 @@ export const languages = {
     experiences: [
       {
         title: 'Full Stack Developer',
-        company_name: 'Ctrl Saúde',
-        icon: ctrls,
-        iconBg: '#E6DEDD',
-        date: 'September 2022 - Current',
+        company_name: 'Supra',
+        icon: supra,
+        iconBg: '#383E56',
+        date: 'November 2023 - current',
         points: [
-          'Project management with agile methodology (Kanban).',
-          'Implementation of systems with the main technologies: AWS, NodeJs, TypeScript and React.',
-          'Backend: implementation of Rest API, integration with external APIs, serverless framework.',
-          'Frontend: implementation of user interfaces with React and Material UI.',
-          'Development of search function with OpenSearch.'
+          'Requirement analysis',
+          'Architecture design',
+          'Coding',
+          'Testing and debugging',
+          'Software maintenance',
+          'Team collaboration',
+          'Documentation'
         ]
       },
       {
-        title: 'Freelancer Developer',
-        company_name: 'Autonomous',
-        icon: vitororsini,
-        iconBg: '#383E56',
-        date: 'August 2020 - September 2022',
+        title: 'Full Stack Developer',
+        company_name: 'Ctrl Saúde',
+        icon: ctrls,
+        iconBg: '#E6DEDD',
+        date: 'September 2022 - November 2023',
         points: [
-          'Developing and maintaining web applications using React.js, Node.js and other related technologies.',
-          "Implementing REST API's using the best practices and clean code.",
-          'Implementing responsive design and ensuring cross-browser compatibility.',
-          'Participating in bootcamps and continually learning new skills.'
+          'MVP system development for sales using a serverless architecture with deployment on AWS cloud.',
+          'Implementation of a ChatBot with the official WhatsApp Business API, development of Back-End and Front-End, integration with external APIs, code versioning, automated deployment, and documentation.',
+          'Techs: TypeScript, React, Material UI, Node.js, AWS (DynamoDB, S3, API Gateway, CloudFront, OpenSearch, CodeBuild, Amplify), Git, BitBucket, MessageBird, ShortCut, Postman.'
         ]
       }
     ],
