@@ -440,7 +440,6 @@ export const languages = {
         points: [
           'Software development.',
           'Agile methodology (Scrum).',
-          'Desenvolvimento de sistema para processamento de pedidos e carrinho de compras.',
           'System development for order processing and shopping cart.',
           'DDD and TDD.'
         ]
