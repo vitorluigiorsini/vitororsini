@@ -28,7 +28,6 @@ import postgresql from './tech/postgresql.png';
 import supra from './company/supra.png';
 import ctrls from './company/ctrls.png';
 import methaenergia from './company/methaenergia.png';
-import supra from './company/supra.png';
 
 import carrent from './carrent.png';
 import jobit from './jobit.png';
