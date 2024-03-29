@@ -16,6 +16,7 @@ import {
   figma,
   docker,
   ctrls,
+  methaenergia,
   supra,
   onebitsports,
   doctorcare,
@@ -93,18 +94,23 @@ export const languages = {
     experiences: [
       {
         title: 'Desenvolvedor Full Stack',
+        company_name: 'Metha Energia',
+        icon: methaenergia,
+        iconBg: '#E6DEDD',
+        date: 'Fevereiro 2024 - Atualmente',
+        points: ['Desenvolvimento de software.', 'Metodologia ágil (Scrum).']
+      },
+      {
+        title: 'Desenvolvedor Full Stack',
         company_name: 'Supra',
         icon: supra,
         iconBg: '#383E56',
-        date: 'Novembro 2023 - atual',
+        date: 'Novembro 2023 - Fevereiro 2024',
         points: [
-          'Análise de requisitos',
-          'Design de arquitetura',
-          'Codificação',
-          'Testes e depuração',
-          'Manutenção do software',
-          'Colaboração em equipe',
-          'Documentação'
+          'Desenvolvimento de software.',
+          'Metodologia ágil (Scrum).',
+          'Desenvolvimento de sistema para processamento de pedidos e carrinho de compras.',
+          'DDD e TDD.'
         ]
       },
       {
@@ -419,18 +425,24 @@ export const languages = {
     experiences: [
       {
         title: 'Full Stack Developer',
+        company_name: 'Metha Energia',
+        icon: methaenergia,
+        iconBg: '#E6DEDD',
+        date: 'February 2024 - Current',
+        points: ['Software development.', 'Agile methodology (Scrum).']
+      },
+      {
+        title: 'Full Stack Developer',
         company_name: 'Supra',
         icon: supra,
         iconBg: '#383E56',
-        date: 'November 2023 - current',
+        date: 'November 2023 - February 2024',
         points: [
-          'Requirement analysis',
-          'Architecture design',
-          'Coding',
-          'Testing and debugging',
-          'Software maintenance',
-          'Team collaboration',
-          'Documentation'
+          'Software development.',
+          'Agile methodology (Scrum).',
+          'Desenvolvimento de sistema para processamento de pedidos e carrinho de compras.',
+          'System development for order processing and shopping cart.',
+          'DDD and TDD.'
         ]
       },
       {
