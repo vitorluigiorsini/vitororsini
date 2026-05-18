@@ -97,7 +97,7 @@ const Contact = () => {
                 );
                 handleCopiedToClipboard();
               }}
-              className="flex mx-auto mt-4 bg-tertiary hover:bg-opacity-60 py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+              className="flex mx-auto mt-4 bg-secondary text-text-primary hover:bg-secondary/90 py-2 px-4 outline-none w-fit text-sm rounded-lg transition-all duration-150 transform hover:-translate-y-0.5 active:translate-y-0"
             >
               ✉️
             </button>
@@ -122,7 +122,7 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder={language.contactText.namePlaceholder}
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              className="bg-gray-900/60 border border-white/10 placeholder:text-white/50 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-transparent"
             />
           </label>
           <label className="flex flex-col">
@@ -135,7 +135,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder={language.contactText.emailPlaceholder}
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              className="bg-gray-900/60 border border-white/10 placeholder:text-white/50 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-transparent"
             />
           </label>
           <label className="flex flex-col">
@@ -148,14 +148,15 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder={language.contactText.messagePlaceholder}
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
+              className="bg-gray-900/60 border border-white/10 placeholder:text-white/50 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-transparent"
             />
           </label>
           <label className="flex justify-center text-sm">{sentMessage}</label>
 
           <button
             type="submit"
-            className="bg-tertiary hover:bg-opacity-60 py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            className="bg-secondary text-text-primary hover:bg-secondary/90 py-3 px-8 outline-none w-fit text-sm font-bold shadow-md shadow-primary rounded-lg transition-all duration-150 transform hover:-translate-y-0.5 active:translate-y-0"
+            disabled={loading}
           >
             {loading ? language.contactText.sending : language.contactText.send}
           </button>

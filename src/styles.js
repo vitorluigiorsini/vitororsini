@@ -1,17 +1,17 @@
 const styles = {
-  paddingX: 'sm:px-16 px-6',
-  paddingY: 'sm:py-16 py-6',
-  padding: 'sm:px-16 px-6 sm:py-16 py-10',
+  paddingX: 'sm:px-8 px-4', // 2rem horizontal on desktop, 1.5rem on mobile (from plan)
+  paddingY: 'sm:py-12 py-8', // 6rem vertical on desktop, 4rem on mobile (from plan)
+  padding: 'sm:px-8 px-4 sm:py-12 py-8',
 
   heroHeadText:
-    'font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2',
+    'font-bold text-text-primary lg:text-[2.5rem] sm:text-[2rem] xs:text-[1.75rem] text-[1.5rem] lg:leading-[3.5rem] mt-4',
   heroSubText:
-    'text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]',
+    'text-text-secondary font-medium lg:text-[1.75rem] sm:text-[1.5rem] xs:text-[1.25rem] text-[1rem] lg:leading-[2.5rem]',
 
   sectionHeadText:
-    'text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]',
+    'text-text-primary font-bold md:text-[2rem] sm:text-[1.75rem] xs:text-[1.5rem] text-[1.25rem]',
   sectionSubText:
-    'sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider'
+    'sm:text-[1rem] text-[0.875rem] text-text-secondary uppercase tracking-wider'
 }
 
 export { styles }

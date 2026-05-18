@@ -14,43 +14,43 @@ import { languages } from '../constants/languages';
 import { useAppLanguageContext } from '../contexts';
 
 const ExperienceCard = ({ experience }) => (
-  <VerticalTimelineElement
-    contentStyle={{ background: '#1d1836', color: '#fff' }}
-    contentArrowStyle={{ borderRight: '7px solid #232631' }}
-    date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="object-cover"
-        />
-      </div>
-    }
-  >
-    <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <p
-        className="text-secondary text-[16px] font-semibold"
-        style={{ margin: 0 }}
-      >
-        {experience.company_name}
-      </p>
-    </div>
-
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-      {experience.points.map((point, index) => (
-        <li
-          key={`experience-point-${index}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
+    <VerticalTimelineElement
+      contentStyle={{ background: 'rgba(10,15,28,0.6)', color: '#fff', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)' }}
+      contentArrowStyle={{ borderRight: '7px solid rgba(255,255,255,0.1)' }}
+      date={experience.date}
+      iconStyle={{ background: experience.iconBg }}
+      icon={
+        <div className="flex justify-center items-center w-full h-full">
+          <img
+            src={experience.icon}
+            alt={experience.company_name}
+            className="object-cover"
+          />
+        </div>
+      }
+    >
+      <div>
+        <h3 className="text-text-primary text-[1.5rem] font-bold">{experience.title}</h3>
+        <p
+          className="text-text-secondary text-[1rem] font-semibold"
+          style={{ margin: 0 }}
         >
-          {point}
-        </li>
-      ))}
-    </ul>
-  </VerticalTimelineElement>
-);
+          {experience.company_name}
+        </p>
+      </div>
+
+      <ul className="mt-5 list-disc ml-5 space-y-2">
+        {experience.points.map((point, index) => (
+          <li
+            key={`experience-point-${index}`}
+            className="text-text-secondary text-[0.875rem] pl-1 tracking-wider"
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
+    </VerticalTimelineElement>
+  );
 
 const Experience = () => {
   const { languageOption } = useAppLanguageContext();

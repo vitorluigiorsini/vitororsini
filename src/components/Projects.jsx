@@ -16,38 +16,38 @@ const ProjectCard = ({
   image,
   source_code_link
 }) => {
-  return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
-      <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
-        <div className="relative w-full h-[200px] rounded-2xl overflow-hidden">
-          <img src={image} alt={name} className="w-full h-full object-cover " />
-        </div>
+return (
+        <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+          <div className="bg-gray-900/60 backdrop-blur p-4 rounded-xl sm:w-[360px] w-full border border-white/5">
+            <div className="relative w-full h-[200px] rounded-xl overflow-hidden">
+              <img src={image} alt={name} className="w-full h-full object-cover" />
+            </div>
 
-        <div className="mt-5">
-          <div className="flex justify-between items-center">
-            <h3 className="text-white font-bold text-[24px]">{name}</h3>
-            <div className="flex justify-end m-3">
-              <div
-                onClick={() => window.open(source_code_link, '_blank')}
-                className="bg-black hover:brightness-50 p-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-              >
-                <img src={github} alt="github" />
+            <div className="mt-4">
+              <div className="flex justify-between items-center">
+                <h3 className="text-text-primary font-bold text-xl">{name}</h3>
+                <div className="flex justify-end m-2">
+                  <div
+                    onClick={() => window.open(source_code_link, '_blank')}
+                    className="bg-black/50 hover:bg-black/70 p-1 w-8 h-8 rounded-full flex justify-center items-center cursor-pointer transition-all duration-150"
+                  >
+                    <img src={github} alt="github" className="w-5 h-5" />
+                  </div>
+                </div>
               </div>
+              <p className="mt-2 text-text-sm text-text-sm">{description}</p>
+            </div>
+
+            <div className="mt-3 flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <p key={tag.name} className="text-xs text-text-secondary bg-gray-800/50 px-2 py-0.5 rounded">
+                  #{tag.name}
+                </p>
+              ))}
             </div>
           </div>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </div>
-    </motion.div>
-  );
+        </motion.div>
+      );
 };
 
 const Projects = () => {
@@ -62,14 +62,14 @@ const Projects = () => {
         </h2>
       </motion.div>
 
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
-        >
-          {language.projectsText.projectsIntro}
-        </motion.p>
-      </div>
+       <div className="w-full flex">
+         <motion.p
+           variants={fadeIn('', '', 0.1, 1)}
+           className="mt-3 text-text-secondary max-w-3xl"
+         >
+           {language.projectsText.projectsIntro}
+         </motion.p>
+       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
         {language.projects.map((project, index) => (

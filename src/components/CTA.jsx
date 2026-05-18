@@ -12,13 +12,13 @@ const CTA = () => {
         href={language.CTAText.cvURL}
         rel="noopener noreferrer"
         target="_blank"
-        className="bg-tertiary animate-lighten hover:bg-opacity-60 py-3 px-3 xs:px-8 outline-none w-fit text-white font-bold xs:text-base text-xs shadow-md shadow-primary rounded-xl"
+        className="bg-secondary text-text-primary hover:bg-secondary/90 px-4 py-2 xs:px-6 xs:py-3 rounded-md transition-all duration-150 transform hover:-translate-y-0.5 active:translate-y-0"
       >
         {language.CTAText.download}
       </a>
       <a
         href="#contact"
-        className="bg-tertiary hover:bg-opacity-60 py-3 px-3 xs:px-8 outline-none w-fit text-white font-bold xs:text-base text-xs shadow-md shadow-primary rounded-xl"
+        className="border border-secondary/20 hover:bg-secondary/10 hover:border-secondary text-text-primary px-4 py-2 xs:px-6 xs:py-3 rounded-md transition-all duration-150 transform hover:-translate-y-0.5 active:translate-y-0"
       >
         {language.CTAText.contact}
       </a>

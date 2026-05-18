@@ -93,12 +93,19 @@ export const languages = {
 
     experiences: [
       {
-        title: 'Desenvolvedor Full Stack',
+        title: 'Engenheiro de Software',
         company_name: 'Metha Energia',
         icon: methaenergia,
         iconBg: '#E6DEDD',
         date: 'Fevereiro 2024 - Atualmente',
-        points: ['Desenvolvimento de software.', 'Metodologia ágil (Scrum).']
+        points: [
+          'Desenvolvimento de software.',
+          'Arquitetura serverless e ferramentas de nuvem da AWS.',
+          'Integrações com APIs externas.',
+          'DDD',
+          'Clean Code.',
+          'Metodologia ágil (Scrum).'
+        ]
       },
       {
         title: 'Desenvolvedor Full Stack',
@@ -424,12 +431,19 @@ export const languages = {
 
     experiences: [
       {
-        title: 'Full Stack Developer',
+        title: 'Software Engineer',
         company_name: 'Metha Energia',
         icon: methaenergia,
         iconBg: '#E6DEDD',
         date: 'February 2024 - Current',
-        points: ['Software development.', 'Agile methodology (Scrum).']
+        points: [
+        'Software development.',
+        'Serverless architecture and AWS cloud tools.',
+        'Integrations with external APIs.',
+        'DDD',
+        'Clean Code.',
+        'Agile methodology (Scrum).'
+        ]
       },
       {
         title: 'Full Stack Developer',

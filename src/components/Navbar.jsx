@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { styles } from '../styles';
+// Using Tailwind classes directly instead of external styles
 import { logo, iconGithub, iconLinkedin, iconWhatsapp } from '../assets';
 import { languages } from '../constants/languages';
 import { useAppLanguageContext } from '../contexts';
@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex h-20 items-center py-5 fixed top-0 z-20 bg-primary`}
+      className="w-full flex h-[3.5rem] items-center px-4 sm:px-6 fixed top-0 z-20 bg-primary/90 backdrop-blur"
     >
       <div className="w-full flex sm:justify-between justify-center items-center max-w-7xl mx-auto">
         <div className="w-full flex items-center justify-between sm:justify-start sm:gap-8">
