@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 import { logo, iconGithub, iconLinkedin, iconWhatsapp } from '../assets';
 import { languages } from '../constants/languages';
 import { useAppLanguageContext } from '../contexts';
+import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const Navbar = () => {
   const { toggleLanguage, languageOption } = useAppLanguageContext();
   const language = languages[languageOption];
 
-  const [active, setActive] = useState('');
   const [isMobile, setIsMobile] = useState(false);
+  const activeSection = useScrollSpy(['about', 'experience', 'projects', 'contact']);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 640px)');
@@ -39,10 +40,7 @@ const Navbar = () => {
             <Link
               to="/"
               className="flex items-center gap-2"
-              onClick={() => {
-                setActive('');
-                window.scrollTo(0, 0);
-              }}
+              onClick={() => window.scrollTo(0, 0)}
             >
               <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
             </Link>
@@ -105,9 +103,8 @@ const Navbar = () => {
               <li
                 key={link.id}
                 className={`${
-                  active === link.title ? 'text-white' : 'text-secondary'
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
-                onClick={() => setActive(link.title)}
+                  activeSection === link.id ? 'text-white' : 'text-secondary'
+                } hover:text-white text-[18px] font-medium cursor-pointer transition-colors duration-200`}
               >
                 <a href={`#${link.id}`}>{link.title}</a>
               </li>

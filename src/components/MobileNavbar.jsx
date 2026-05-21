@@ -4,10 +4,11 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { SiKnowledgebase, SiLitiengine } from 'react-icons/si'
 import { BiMessageSquareDetail } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
+import { useScrollSpy } from '../hooks/useScrollSpy'
 
 const MobileNavbar = () => {
-  const [activeNav, setActiveNav] = useState('')
   const [isMobile, setIsMobile] = useState(false)
+  const activeSection = useScrollSpy(['about', 'experience', 'projects', 'contact'])
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 640px)')
@@ -33,43 +34,32 @@ const MobileNavbar = () => {
     <nav id="mobileNav">
       <Link
         to="/"
-        className={activeNav === '' ? 'active' : ''}
-        onClick={() => {
-          setActiveNav('')
-          window.scrollTo(0, 0)
-        }}
+        className={activeSection === '' ? 'active' : ''}
+        onClick={() => window.scrollTo(0, 0)}
       >
         <AiOutlineHome />
       </Link>
       <a
         href="#about"
-        onClick={() => setActiveNav('about')}
-        className={activeNav === 'about' ? 'active' : ''}
-        // title="About"
+        className={activeSection === 'about' ? 'active' : ''}
       >
         <AiOutlineUser />
       </a>
       <a
         href="#experience"
-        onClick={() => setActiveNav('experience')}
-        className={activeNav === 'experience' ? 'active' : ''}
-        // title="Experience"
+        className={activeSection === 'experience' ? 'active' : ''}
       >
         <SiKnowledgebase />
       </a>
       <a
         href="#projects"
-        onClick={() => setActiveNav('projects')}
-        className={activeNav === 'projects' ? 'active' : ''}
-        // title="Projects"
+        className={activeSection === 'projects' ? 'active' : ''}
       >
         <SiLitiengine />
       </a>
       <a
         href="#contact"
-        onClick={() => setActiveNav('contact')}
-        className={activeNav === 'contact' ? 'active' : ''}
-        // title="Contact"
+        className={activeSection === 'contact' ? 'active' : ''}
       >
         <BiMessageSquareDetail />
       </a>
