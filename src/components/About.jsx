@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
-import { languages } from '../constants/languages';
+import { translations } from '../constants/translations';
 import { useAppLanguageContext } from '../contexts/LanguageContext';
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -30,27 +30,31 @@ const ServiceCard = ({ index, title, icon }) => {
 };
 
 const About = () => {
-  const { languageOption } = useAppLanguageContext();
-  const language = languages[languageOption];
+  const { t, tv } = useAppLanguageContext();
 
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>{language.aboutText.title}</p>
+        <p className={styles.sectionSubText}>{t('aboutText.title')}</p>
         <h2 className={styles.sectionHeadText}>
-          {language.aboutText.subtitle}
+          {t('aboutText.subtitle')}
         </h2>
       </motion.div>
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-text-secondary max-w-3xl"
       >
-        {language.aboutText.about}
+        {t('aboutText.about')}
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
-        {language.services.map((service, index) => (
-          <ServiceCard key={`service-${index}`} index={index} {...service} />
+        {translations.services.map((service, index) => (
+          <ServiceCard
+            key={`service-${index}`}
+            index={index}
+            title={tv(service.title)}
+            icon={service.icon}
+          />
         ))}
       </div>
     </>

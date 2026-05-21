@@ -2,23 +2,23 @@ import { SectionWrapper } from '../hoc';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { textVariant } from '../utils/motion';
-import { languages } from '../constants/languages';
+import { translations } from '../constants/translations';
 import { useAppLanguageContext } from '../contexts';
 
 const Tech = () => {
-  const { languageOption } = useAppLanguageContext();
-  const language = languages[languageOption];
+  const { t } = useAppLanguageContext();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>{language.skillsText.title}</p>
+        <p className={styles.sectionSubText}>{t('skillsText.title')}</p>
         <h2 className={styles.sectionHeadText}>
-          {language.skillsText.subtitle}
+          {t('skillsText.subtitle')}
         </h2>
       </motion.div>
 
       <div className="flex flex-row flex-wrap mt-20 justify-center gap-20">
-        {language.technologies.map((technology) => (
+        {translations.technologies.map((technology) => (
           <div
             className="w-20 h-20 flex-col gap-2 justify-center items-center text-center"
             key={technology.name}
@@ -32,4 +32,4 @@ const Tech = () => {
   );
 };
 
-export default SectionWrapper(Tech, '');
+export default SectionWrapper(Tech, 'tech');

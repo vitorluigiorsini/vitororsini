@@ -5,6 +5,7 @@ import {
   useContext,
   useState
 } from 'react';
+import { t, getTranslation } from '../utils/translation';
 
 const LanguageContext = createContext({});
 
@@ -18,26 +19,33 @@ export const AppLanguageProvider = ({ children }) => {
   const [languageOption, setLanguageOption] = useState(initialLanguage);
 
   const toggleLanguage = useCallback(() => {
-    console.log(languageOption);
-    sessionStorage.clear();
-    setLanguageOption((oldLanguageOption) =>
-      oldLanguageOption === 'pt-br' ? 'en' : 'pt-br'
-    );
-    console.log(languageOption);
-  }, []);
-
-  const language = useMemo(() => {
-    sessionStorage.setItem('language', languageOption);
-    if (languageOption === 'pt-br') return 'pt-br';
-
-    return 'en';
+    const newLanguage = languageOption === 'pt-br' ? 'en' : 'pt-br';
+    sessionStorage.setItem('language', newLanguage);
+    setLanguageOption(newLanguage);
   }, [languageOption]);
-  console.log(language);
+
+  const translate = useCallback(
+    (keyPath) => t(keyPath, languageOption),
+    [languageOption]
+  );
+
+  const translateValue = useCallback(
+    (value) => getTranslation(value, languageOption),
+    [languageOption]
+  );
+
+  const contextValue = useMemo(
+    () => ({
+      languageOption,
+      toggleLanguage,
+      t: translate,
+      tv: translateValue
+    }),
+    [languageOption, toggleLanguage, translate, translateValue]
+  );
 
   return (
-    <LanguageContext.Provider
-      value={{ languageOption: language, toggleLanguage: toggleLanguage }}
-    >
+    <LanguageContext.Provider value={contextValue}>
       {children}
     </LanguageContext.Provider>
   );

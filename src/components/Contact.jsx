@@ -6,12 +6,11 @@ import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
-import { languages } from '../constants/languages';
+import { translations } from '../constants/translations';
 import { useAppLanguageContext } from '../contexts';
 
 const Contact = () => {
-  const { languageOption } = useAppLanguageContext();
-  const language = languages[languageOption];
+  const { t, tv } = useAppLanguageContext();
 
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -50,7 +49,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          setSentMessage(language.contactText.sentOk);
+          setSentMessage(t('contactText.sentOk'));
 
           setForm({
             name: '',
@@ -63,7 +62,7 @@ const Contact = () => {
 
           console.log(error);
 
-          setSentMessage(language.contactText.sentError);
+          setSentMessage(t('contactText.sentError'));
         }
       );
   };
@@ -81,19 +80,19 @@ const Contact = () => {
         variants={slideIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>{language.contactText.title}</p>
+        <p className={styles.sectionSubText}>{t('contactText.title')}</p>
         <h3 className={styles.sectionHeadText}>
-          {language.contactText.subtitle}
+          {t('contactText.subtitle')}
         </h3>
         {!copiedToClipboard ? (
           <>
             <p className="text-white font-medium mt-4 text-center">
-              {language.contactText.copyToClipboardText}
+              {t('contactText.copyToClipboardText')}
             </p>
             <button
               onClick={() => {
                 navigator.clipboard.writeText(
-                  language.contactText.clipboardEmail
+                  translations.contactText.clipboardEmail
                 );
                 handleCopiedToClipboard();
               }}
@@ -104,7 +103,7 @@ const Contact = () => {
           </>
         ) : (
           <p className="text-white font-medium mt-4 text-center">
-            {language.contactText.copiedToClipboardText}
+            {t('contactText.copiedToClipboardText')}
           </p>
         )}
         <form
@@ -114,40 +113,40 @@ const Contact = () => {
         >
           <label className="flex flex-col">
             <span className="text-white font-medium mb-2">
-              {language.contactText.name}
+              {t('contactText.name')}
             </span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder={language.contactText.namePlaceholder}
+              placeholder={t('contactText.namePlaceholder')}
               className="bg-gray-900/60 border border-white/10 placeholder:text-white/50 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-transparent"
             />
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-2">
-              {language.contactText.email}
+              {t('contactText.email')}
             </span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder={language.contactText.emailPlaceholder}
+              placeholder={t('contactText.emailPlaceholder')}
               className="bg-gray-900/60 border border-white/10 placeholder:text-white/50 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-transparent"
             />
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-2">
-              {language.contactText.message}
+              {t('contactText.message')}
             </span>
             <textarea
               rows="5"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder={language.contactText.messagePlaceholder}
+              placeholder={t('contactText.messagePlaceholder')}
               className="bg-gray-900/60 border border-white/10 placeholder:text-white/50 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-transparent"
             />
           </label>
@@ -158,7 +157,7 @@ const Contact = () => {
             className="bg-secondary text-text-primary hover:bg-secondary/90 py-3 px-8 outline-none w-fit text-sm font-bold shadow-md shadow-primary rounded-lg transition-all duration-150 transform hover:-translate-y-0.5 active:translate-y-0"
             disabled={loading}
           >
-            {loading ? language.contactText.sending : language.contactText.send}
+            {loading ? t('contactText.sending') : t('contactText.send')}
           </button>
         </form>
       </motion.div>

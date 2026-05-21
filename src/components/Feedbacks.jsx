@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
-import { languages } from '../constants/languages';
+import { translations } from '../constants/translations';
 import { useAppLanguageContext } from '../contexts';
 
 const FeedbackCard = ({
@@ -43,8 +43,8 @@ const FeedbackCard = ({
 );
 
 const Feedbacks = () => {
-  const { languageOption } = useAppLanguageContext();
-  const language = languages[languageOption];
+  const { t } = useAppLanguageContext();
+
   return (
     <div className="mt-12 bg-black-100 rounded-[20px]">
       <div
@@ -52,15 +52,15 @@ const Feedbacks = () => {
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>
-            {language.testimonialsText.subtitle}
+            {t('testimonialsText.subtitle')}
           </p>
           <h2 className={styles.sectionHeadText}>
-            {language.testimonialsText.title}
+            {t('testimonialsText.title')}
           </h2>
         </motion.div>
       </div>
       <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
-        {language.testimonials.map((testimonial, index) => (
+        {translations.testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
       </div>

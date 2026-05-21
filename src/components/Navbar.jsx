@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 
 // Using Tailwind classes directly instead of external styles
 import { logo, iconGithub, iconLinkedin, iconWhatsapp } from '../assets';
-import { languages } from '../constants/languages';
+import { translations } from '../constants/translations';
 import { useAppLanguageContext } from '../contexts';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const Navbar = () => {
-  const { toggleLanguage, languageOption } = useAppLanguageContext();
-  const language = languages[languageOption];
+  const { toggleLanguage, languageOption, t } = useAppLanguageContext();
 
   const [isMobile, setIsMobile] = useState(false);
   const activeSection = useScrollSpy(['about', 'experience', 'projects', 'contact']);
@@ -99,14 +98,14 @@ const Navbar = () => {
         </div>
         {isMobile ? null : (
           <ul className="list-none flex flex-row gap-10">
-            {language.navLinks.map((link) => (
+            {translations.navLinks.map((link, index) => (
               <li
                 key={link.id}
                 className={`${
                   activeSection === link.id ? 'text-white' : 'text-secondary'
                 } hover:text-white text-[18px] font-medium cursor-pointer transition-colors duration-200`}
               >
-                <a href={`#${link.id}`}>{link.title}</a>
+                <a href={`#${link.id}`}>{t(`navLinks.${index}.title`)}</a>
               </li>
             ))}
           </ul>

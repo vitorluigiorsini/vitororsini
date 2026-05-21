@@ -1,11 +1,9 @@
 import CTA from './CTA';
 
-import { languages } from '../constants/languages';
 import { useAppLanguageContext } from '../contexts';
 
 const Hero = () => {
-  const { languageOption } = useAppLanguageContext();
-  const language = languages[languageOption];
+  const { t } = useAppLanguageContext();
 
   return (
     <section className="relative w-full h-screen mx-auto">
@@ -19,11 +17,11 @@ const Hero = () => {
 
         <div>
           <h1 className="text-text-primary font-bold text-5xl sm:text-4xl xl:text-5xl">
-            {language.heroText.greeting}{' '}
+            {t('heroText.greeting')}{' '}
             <span className="text-secondary">Vitor</span>
           </h1>
           <p className="text-text-secondary mt-2 text-lg">
-            {language.heroText.role}
+            {t('heroText.role')}
           </p>
         </div>
       </div>
