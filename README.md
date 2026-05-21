@@ -6,9 +6,10 @@ A modern, minimalist 3D portfolio website built with React, Three.js, and Framer
 
 - **3D Hero Section**: Interactive Three.js background with Earth and stars
 - **Scroll Spy Navigation**: Automatic menu highlighting based on scroll position (desktop & mobile)
+- **Back to Top Button**: Floating button appears after scrolling (desktop only)
 - **Responsive Design**: Mobile-first approach with dedicated mobile navbar
 - **Smooth Animations**: Framer Motion for page transitions and micro-interactions
-- **Internationalization**: English/Portuguese language toggle
+- **Internationalization (i18n)**: English/Portuguese language toggle with flattened key-first translation structure (~55% reduction in duplication)
 - **Contact Form**: EmailJS integration for direct messaging
 - **Dark Theme**: Professional minimalist aesthetic with glass morphism effects
 
@@ -41,6 +42,7 @@ A modern, minimalist 3D portfolio website built with React, Three.js, and Framer
 │   │   ├── canvas/          # Three.js components (Earth, Stars)
 │   │   ├── Navbar.jsx       # Desktop navigation with scroll spy
 │   │   ├── MobileNavbar.jsx # Mobile navigation with scroll spy
+│   │   ├── BackToTop.jsx    # Floating back-to-top button (desktop)
 │   │   ├── Hero.jsx         # Hero section with 3D background
 │   │   ├── About.jsx        # About section with service cards
 │   │   ├── Experience.jsx   # Work experience timeline
@@ -51,13 +53,14 @@ A modern, minimalist 3D portfolio website built with React, Three.js, and Framer
 │   ├── hooks/
 │   │   └── useScrollSpy.js  # Custom hook for scroll-based navigation
 │   ├── contexts/
-│   │   └── LanguageContext.jsx # Language toggle context
+│   │   └── LanguageContext.jsx # Language toggle context with t/tv functions
 │   ├── constants/
-│   │   └── languages.js     # Internationalization content
+│   │   └── translations.js  # Flattened i18n structure (key-first)
 │   ├── hoc/
 │   │   └── SectionWrapper.jsx # Higher-order component for sections
 │   ├── utils/
-│   │   └── motion.js        # Framer Motion preset variants
+│   │   ├── motion.js        # Framer Motion preset variants
+│   │   └── translation.js   # Translation helper functions (t, tv)
 │   ├── assets/              # Images and icons
 │   ├── styles.js            # Custom text styles
 │   └── index.css            # Global styles and Tailwind directives
@@ -129,10 +132,17 @@ npm run preview
 ## Key Components
 
 ### Scroll Spy Navigation
-The navigation automatically highlights the current section as you scroll. Implemented via a custom `useScrollSpy` hook that uses Intersection Observer logic to detect which section is currently in view.
+The navigation automatically highlights the current section as you scroll. Implemented via a custom `useScrollSpy` hook that detects which section is currently in view.
 
-### Language Context
-Toggle between English and Portuguese throughout the entire application. All text content is managed through `constants/languages.js`.
+### Back to Top Button
+A floating button appears in the bottom-right corner after scrolling 200px (desktop only). Clicking it smoothly scrolls to the top of the page.
+
+### Internationalization (i18n)
+The translation system uses a **flattened key-first structure** that eliminates duplication:
+- **`t(keyPath)`**: Translates a string using dot notation (e.g., `t('heroText.greeting')`)
+- **`tv(value)`**: Translates a value that may be an object or array (e.g., `tv(service.title)`, `tv(experience.points)`)
+- **Automatic fallback**: Missing translations fall back to `pt-br`
+- **~55% smaller** than the previous structure by eliminating duplicate language blocks
 
 ### Section Wrapper
 Higher-order component that wraps each section with consistent styling, animations, and ID anchors for navigation.
