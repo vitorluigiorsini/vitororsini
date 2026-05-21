@@ -11,7 +11,8 @@ import {
   Tech,
   Projects,
   StarsCanvas,
-  Footer
+  Footer,
+  BackToTop
 } from './components';
 import { AppLanguageProvider } from './contexts/LanguageContext';
 
@@ -35,6 +36,7 @@ const App = () => {
             <StarsCanvas />
             <Footer />
           </div>
+          <BackToTop />
         </div>
       </BrowserRouter>
     </AppLanguageProvider>

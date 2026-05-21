@@ -9,6 +9,7 @@ import Projects from './Projects';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Footer from './Footer';
+import BackToTop from './BackToTop';
 
 export {
   Hero,
@@ -22,5 +23,6 @@ export {
   Contact,
   EarthCanvas,
   StarsCanvas,
-  Footer
+  Footer,
+  BackToTop
 };
